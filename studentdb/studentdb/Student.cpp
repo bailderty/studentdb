@@ -41,13 +41,9 @@ float Student::getGPA()
             {
                 totalGPA = totalGPA + (2.5 * c.credits);
             }
-            else if (c.grade.compare("C")==0)
-            {
-                totalGPA = totalGPA + (2 * c.credits);
-            }
             else if (c.grade.compare("D")==0)
             {
-                totalGPA = totalGPA + (1 * c.credits);
+                totalGPA = totalGPA + (2 * c.credits);
             }
             else
             {

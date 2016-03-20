@@ -66,12 +66,12 @@
 			isa = PBXGroup;
 			children = (
 				74D5A5411C9E618B00FE1F47 /* main.cpp */,
-				74D5A5341C9DE5F900FE1F47 /* Database.cpp */,
 				74D5A5351C9DE5F900FE1F47 /* Database.h */,
+				74D5A5341C9DE5F900FE1F47 /* Database.cpp */,
 				74D5A5361C9DE5F900FE1F47 /* Input.txt */,
 				74D5A5381C9DE5F900FE1F47 /* Makefile.txt */,
-				74D5A5391C9DE5F900FE1F47 /* Student.cpp */,
 				74D5A53A1C9DE5F900FE1F47 /* Student.h */,
+				74D5A5391C9DE5F900FE1F47 /* Student.cpp */,
 			);
 			path = studentdb;
 			sourceTree = "<group>";

@@ -10,6 +10,7 @@
 #include "Student.h"
 using namespace std;
 
+//Constructor
 Student::Student(int id, int numCourses)
 {
     studentID = id;
@@ -17,9 +18,10 @@ Student::Student(int id, int numCourses)
     gpa = 0;
     vector <Coursetype> Courses;
 }
-//TODO: Calculate the GPA from the letter grades given in CourseType
+//return gpa of student
 float Student::getGPA()
 {
+    //if gpa has not been calculated
     if (gpa == 0) {
         float totalGPA = 0;
         float totalCredits = 0;
@@ -54,23 +56,26 @@ float Student::getGPA()
         gpa =  totalGPA / totalCredits;
         return gpa;
     }
+    //return already calculated gpa
     else
     {
         return gpa;
     }
 }
 
+//return number of courses
 int Student::getNumCourses()
 {
     return nCourses;
 }
 
+//return student id
 int Student::getId()
 {
     return studentID;
 }
-
-//TODO: figure out total GPA * credits
+//parameters int course number, int credits, char * grade
+//add course to student
 void Student::addStudentCourseInfo(int cNumber, int cCredits, char * g)
 {
     Coursetype c;
@@ -81,7 +86,8 @@ void Student::addStudentCourseInfo(int cNumber, int cCredits, char * g)
     Courses.push_back(c);
 }
 
-
+//parameters int course number
+//return true if student took course
 bool Student::tookCourse(int courseNumber)
 {
     for (int i = 0; i< Courses.size(); i++) {
@@ -92,6 +98,7 @@ bool Student::tookCourse(int courseNumber)
     }
     return false;
 }
+
 /*
 void Student::print()
 {

@@ -9,25 +9,31 @@
 #include "Database.h"
 #include <iostream>
 
+//Constructor
 Database::Database(int n)
 {
     numStudents = n;
     vector <Student> students;
 }
 
+//Parameter Student
+//add student to database
 void Database::addStudent(Student s)
 {
     students.push_back(s);
 }
 
+//return number of students in database
 int Database::getNumStudents()
 {
     return numStudents;
 }
-
+//parameters char , int
+//handle access to database
 void Database::dataProcess(char c, int x)
 {
     switch (c) {
+        //display options
         case 'h':
             std::cout<<"You can enter the following valid commands:\n";
             std::cout<<"n: Get number of student in the database\n";
@@ -36,11 +42,14 @@ void Database::dataProcess(char c, int x)
             std::cout<<"p num: Get number of students with GPA>num. Also print student IDs\n";
             std::cout<<"q: Quit\n";
             break;
+        //print number of students in database
         case 'n':
             std::cout<<numStudents<<endl;
             break;
+        //print number of students that took course with course number x
         case 'c':
         {
+            //check for valid range
             if (x < 100 || x > 999) {
                 cout<<"Invalid Input"<<endl;
                 break;
@@ -58,13 +67,16 @@ void Database::dataProcess(char c, int x)
                 }
                 s = nullptr;
             }
+            //print to screen
             std::cout<<count<< endl;
             if (count > 0) {
                 std::cout<<studentIDs<<endl;
             }
             break;
         }
+        //print student gpa
         case 'g':
+            //check for valid range
             if (x < 10000 || x > 99999) {
                 cout<<"Invalid Input"<<endl;
                 break;
@@ -78,8 +90,10 @@ void Database::dataProcess(char c, int x)
                 }
             }
             break;
+        //print students with gpa higher than x
         case 'p':
         {
+            //check for valid range
             if (x < 0 || x > 4) {
                 cout<<"Invalid Input"<<endl;
                 break;
@@ -89,18 +103,20 @@ void Database::dataProcess(char c, int x)
             for (int i = 0; i < students.size(); i++)
             {
                 Student s = students.at(i);
-                if (s.getGPA() >= x ) {
+                if (s.getGPA() > x ) {
                     count++;
                     studentIDs.append(std::to_string(s.Student::getId()));
                     studentIDs.append(" ");
                 }
             }
+            //print to screen
             std::cout<<count<< endl;
             if (count > 0) {
                 std::cout<<studentIDs<<endl;
             }
             break;
         }
+        //quit program
         case 'q':
             exit(0);
             break;

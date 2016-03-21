@@ -6,14 +6,6 @@
 //  Copyright © 2016 BDM. All rights reserved.
 //
 
-/* 
-h: displays list of available commands to the user
-n: displays the number of students currently in the database
-c num:displays the number of students who took course 'num'. It also prints the student id numbers of those students.
-g student_id: displays the GPA of student with student id number given
-p num: displays the number of students with a GPA greater than 'num'. It also prints the student id numbers of those students.
-q: will exit the program
- */
 #include "Database.h"
 #include <iostream>
 
@@ -49,33 +41,49 @@ void Database::dataProcess(char c, int x)
             break;
         case 'c':
         {
+            if (x < 100 || x > 999) {
+                cout<<"Invalid Input"<<endl;
+                break;
+            }
             string studentIDs = "";
             int count = 0;
+            Student * s = nullptr;
             for (int i = 0; i < students.size(); i++)
             {
-                Student s = students.at(i);
-                if (s.tookCourse(x)) {
+                 s = &students.at(i);
+                if (s->tookCourse(x)) {
                     count++;
-                    studentIDs.append(std::to_string(s.Student::getId()));
+                    studentIDs.append(std::to_string(s->Student::getId()));
                     studentIDs.append(" ");
                 }
+                s = nullptr;
             }
             std::cout<<count<< endl;
-            std::cout<<studentIDs<<endl;
+            if (count > 0) {
+                std::cout<<studentIDs<<endl;
+            }
             break;
         }
         case 'g':
+            if (x < 10000 || x > 99999) {
+                cout<<"Invalid Input"<<endl;
+                break;
+            }
             for (int i = 0; i < students.size(); i++)
             {
                 Student s = students.at(i);
                 if (s.Student::getId() == x) {
-                    std::cout<<s.getGPA();
+                    std::cout<<s.getGPA()<<endl;;
                     break;
                 }
             }
             break;
         case 'p':
         {
+            if (x < 0 || x > 4) {
+                cout<<"Invalid Input"<<endl;
+                break;
+            }
             string studentIDs = "";
             int count = 0;
             for (int i = 0; i < students.size(); i++)
@@ -88,7 +96,9 @@ void Database::dataProcess(char c, int x)
                 }
             }
             std::cout<<count<< endl;
-            std::cout<<studentIDs<<endl;
+            if (count > 0) {
+                std::cout<<studentIDs<<endl;
+            }
             break;
         }
         case 'q':

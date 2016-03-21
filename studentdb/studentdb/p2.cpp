@@ -15,7 +15,7 @@
 #include "Database.h"
 using namespace std;
 
-int main () {
+int main (int argc, char* argv[]) {
 
     string line;
     int lineCounter = 0;
@@ -23,7 +23,7 @@ int main () {
     Database * db = NULL;
     Student * s = NULL;
     ifstream myfile;
-    myfile.open("Input.txt");
+    myfile.open(argv[1]);
     if (myfile.is_open())
     {
         while (getline(myfile,line))
@@ -50,8 +50,6 @@ int main () {
                 sid = arr.at(0);
                 numCourses = arr.at(1);
                 s = new Student(sid,numCourses);
-                
-                
             }
             else if (lineCounter % 2 == 0)
             {
@@ -80,8 +78,9 @@ int main () {
                             s->addStudentCourseInfo(courseid, credits, cstr) ;
                         }
                     }
-                    db->Database::addStudent(*s);
                 }
+                db->Database::addStudent(*s);
+
             }
             lineCounter = lineCounter + 1;
         }
@@ -106,6 +105,7 @@ int main () {
         }
         if (arr.size() == 2) {
             option = arr.at(0).at(0);
+            option = tolower(option);
             x = atoi(arr.at(1).c_str());
             db->dataProcess(option, x);
         }

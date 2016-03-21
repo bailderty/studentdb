@@ -92,3 +92,17 @@ bool Student::tookCourse(int courseNumber)
     }
     return false;
 }
+/*
+void Student::print()
+{
+    std::cout << "student id: " << studentID << std::endl;
+    cout << "num Courses: " << nCourses << endl;
+    for(int i = 0; i < Courses.size(); i++)
+    {
+        Coursetype c = Courses.at(i);
+        cout << "couse number: " << c.courseNum << endl;
+        cout << "credits: " << c.credits << endl;
+        cout << "grade: " << c.grade << endl;
+    }
+}
+ */

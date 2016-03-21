@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		74D5A53B1C9DE5F900FE1F47 /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D5A5341C9DE5F900FE1F47 /* Database.cpp */; };
 		74D5A53D1C9DE5F900FE1F47 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D5A5391C9DE5F900FE1F47 /* Student.cpp */; };
-		74D5A5421C9E618B00FE1F47 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D5A5411C9E618B00FE1F47 /* main.cpp */; };
+		74D5A5441C9F71DD00FE1F47 /* p2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74D5A5431C9F71DD00FE1F47 /* p2.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +29,10 @@
 		74D5A5341C9DE5F900FE1F47 /* Database.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Database.cpp; sourceTree = "<group>"; };
 		74D5A5351C9DE5F900FE1F47 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		74D5A5361C9DE5F900FE1F47 /* Input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Input.txt; sourceTree = "<group>"; };
-		74D5A5381C9DE5F900FE1F47 /* Makefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.txt; sourceTree = "<group>"; };
+		74D5A5381C9DE5F900FE1F47 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		74D5A5391C9DE5F900FE1F47 /* Student.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
 		74D5A53A1C9DE5F900FE1F47 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
-		74D5A5411C9E618B00FE1F47 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = "<group>"; };
+		74D5A5431C9F71DD00FE1F47 /* p2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = p2.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +65,13 @@
 		74D5A52C1C9DE5AE00FE1F47 /* studentdb */ = {
 			isa = PBXGroup;
 			children = (
-				74D5A5411C9E618B00FE1F47 /* main.cpp */,
 				74D5A5351C9DE5F900FE1F47 /* Database.h */,
 				74D5A5341C9DE5F900FE1F47 /* Database.cpp */,
 				74D5A5361C9DE5F900FE1F47 /* Input.txt */,
-				74D5A5381C9DE5F900FE1F47 /* Makefile.txt */,
+				74D5A5381C9DE5F900FE1F47 /* Makefile */,
 				74D5A53A1C9DE5F900FE1F47 /* Student.h */,
 				74D5A5391C9DE5F900FE1F47 /* Student.cpp */,
+				74D5A5431C9F71DD00FE1F47 /* p2.cpp */,
 			);
 			path = studentdb;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 			files = (
 				74D5A53B1C9DE5F900FE1F47 /* Database.cpp in Sources */,
 				74D5A53D1C9DE5F900FE1F47 /* Student.cpp in Sources */,
-				74D5A5421C9E618B00FE1F47 /* main.cpp in Sources */,
+				74D5A5441C9F71DD00FE1F47 /* p2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

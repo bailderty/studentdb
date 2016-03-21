@@ -41,5 +41,7 @@ class Student{
     bool tookCourse(int courseNumber);
 
     int getId(void);
+    
+    //void print();
   };
 #endif
